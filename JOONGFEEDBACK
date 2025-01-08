@@ -1,0 +1,13 @@
+function submitFeedback(feedback) {
+    const feedbackMessage = document.getElementById('feedbackMessage');
+    if (feedback === 'like') {
+        feedbackMessage.textContent = "Thank you for your positive feedback! 👍";
+        feedbackMessage.style.color = "green";
+    } else if (feedback === 'dislike') {
+        feedbackMessage.textContent = "Sorry to hear that. Your feedback is important! 👎";
+        feedbackMessage.style.color = "red";
+    }
+
+    // Store the feedback in the browser (localStorage) for later reference if needed.
+    localStorage.setItem('userFeedback', feedback);
+}
